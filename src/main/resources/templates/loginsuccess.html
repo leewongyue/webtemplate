@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Open+Sans:wght@800&family=Smooch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/menubar.css">
+    <title>블로그 테스트</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="fixedheader">
+            <p class="logo" onclick="location.href='http://26something.site'">TEST</p>
+            <a class="giticon" href="https://github.com/leewongyue" target='_blank'>
+                <img src="../static/imgs/git_icon.png">
+            </a>
+            <a class="instaicon" href="https://instagram.com">
+                <img src="../static/imgs/insta_icon.png">
+            </a>
+        </div>
+        <div class="menubutton">
+
+
+            <input type="checkbox" id="menuicon">
+            <label class="spanicon" for="menuicon">
+                <span class="menuicon icon1"></span>
+                <span class="menuicon icon2"></span>
+                <span class="menuicon icon3"></span>
+            </label>
+            <div class="sidebar">
+
+                <div class="list1">
+                    <ul class="menulist">
+                        카테고리<br><br>
+                        <a class="phover" href="https://localhost/board">upload</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <br><br>
+                    </ul>
+                    <ul class="menulist">
+                        카테고리<br><br>
+                        <a onclick="" href="https://naver.com">urltestnaver</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <br><br>
+                    </ul>
+                    <ul class="menulist">
+                        카테고리<br><br>
+                        <a class="phover" href="https://naver.com">urltestnaver</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <br><br>
+                    </ul>
+                    <ul class="menulist">
+                        카테고리<br><br>
+                        <a class="phover" href="https://naver.com">urltestnaver</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <br><br>
+                    </ul>
+                    <ul class="menulist">
+                        카테고리<br><br>
+                        <a class="phover" href="https://naver.com">urltestnaver</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <a onclick="">menu</a>
+                        <br><br>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="textbardiv">
+                동적 텍스트 영역</div>
+            <div class="textbardiv">
+                동적 텍스트 영역
+            </div>
+        </div>
+    </header>
+    <!--end header-->
+    <!--start section-->
+
+    <section>
+        <!--start section_nav-->
+        <nav>
+        </nav>
+
+        <article>
+
+            <!-- article 내부 div공간 3개를 flex로 1:1:1 비율로-->
+
+            <div class="box">
+                <h1>로그인 성공</h1>
+                <a href="https://localhost/main">메인페이지</a>
+
+                <table border="1">
+                    <tr>
+                        <td>id</td>
+                        <td>pw</td>
+                        <td>name</td>
+                        <td>addr</td>
+                        <td>phone</td>
+                        <td>sex</td>
+                    </tr>
+                    <tr th:each="m:${member}">
+                        <td th:text="${m.getId()}"></td>
+                        <td th:text="${m.getPw()}"></td>
+                        <td th:text="${m.getName()}"></td>
+                        <td th:text="${m.getAddr()}"></td>
+                        <td th:text="${m.getPhone()}"></td>
+                        <td th:text="${m.getSex()}"></td>
+
+                    </tr>
+                </table>
+
+
+            </div>
+
+
+        </article>
+        <!--end section_nav-->
+        <!--start section_article-->
+
+        <!--end section_article-->
+        <!--start section_aside-->
+        <aside></aside>
+        <!--end section_aside-->
+    </section>
+    <!--end section-->
+    <footer>
+
+        <div>
+            <a onclick=location.href="http://localhost:8080/member/login">
+                관리자페이지
+            </a>
+            <p>
+                이용약관
+            </p>
+            <p>
+                개인정보처리방침
+            </p>
+            <p>
+                제휴문의
+            </p>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
